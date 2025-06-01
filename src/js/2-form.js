@@ -39,25 +39,22 @@ document.addEventListener('DOMContentLoaded', () => {
 function handleSubmit(e) {
   e.preventDefault();
   const formState = localStorage.getItem('feedback-form-state');
-  if (!formState) {
-    console.error('Local Storage error');
-    return;
+  if (formState) {
+    let data;
+    try {
+      data = JSON.parse(formState);
+    } catch (err) {
+      console.error('Wrong data in local storage', err);
+      return;
+    }
+    const email = data.email;
+    const message = data.message;
+    if (email != '' && message != '') {
+      localStorage.removeItem('feedback-form-state');
+      e.target.reset();
+      console.log(formData);
+      return;
+    }
   }
-
-  let data;
-  try {
-    data = JSON.parse(formState);
-  } catch (err) {
-    console.error('Wrong data in local storage', err);
-    return;
-  }
-  const email = data.email;
-  const message = data.message;
-
-  if (email === '' || message === '') return alert('Fill please all fields');
-
-  localStorage.removeItem('feedback-form-state');
-  e.target.reset();
-
-  console.log(formData);
+  return alert('Fill please all fields');
 }
