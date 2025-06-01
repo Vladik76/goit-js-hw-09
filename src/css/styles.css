@@ -18,7 +18,7 @@ ol {
 .gallery {
   display: flex;
   align-items: center;
-  row-gap: 20px;
+  row-gap: 24px;
   column-gap: 24px;
   flex-wrap: wrap;
   width: 1128px;
@@ -46,4 +46,17 @@ ol {
 
 .gallery-image:hover {
   transform: scale(1.03);
+}
+.simple-lightbox{
+  background-color: #2E2F42;
+}
+
+.sl-wrapper .sl-close {
+  color: white !important;
+}
+.sl-wrapper .sl-counter{
+  color:white !important;
+}
+.sl-wrapper .sl-navigation button{
+  color:white !important;
 }
