@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 *{
   box-sizing: border-box;
 }
@@ -59,4 +61,72 @@ ol {
 }
 .sl-wrapper .sl-navigation button{
   color:white !important;
+}
+
+/*task 2*/
+.feedback-form label {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  color: #2e2f42;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+
+.feedback-form label input,
+.feedback-form label textarea
+ {
+  font: inherit;
+  color: inherit;
+  border: 1px solid #808080;
+  border-radius: 4px;
+  width: 360px;
+  height: 40px;
+  padding-left: 16px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.feedback-form label input:focus,
+.feedback-form label textarea:focus {
+  outline: none;
+  border: 1px solid #808080;
+
+}
+
+.feedback-form label textarea{
+  height: 80px;
+}
+.feedback-form label input:hover,
+.feedback-form label textarea:hover{
+  border: 1px solid #000;
+    border-radius: 4px;
+  }
+
+button {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #4e75ff;
+  color: white;
+  border-radius: 8px;
+  padding: 8px 16px;
+  min-width: 86px;
+  height: 40px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 150%;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  display: block;
+  border: none;
+}
+
+button:hover,
+button:focus {
+  background-color: #6c8cff;
+  ;
+
 }
